@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Myckelraj_Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+   </script>
+   <script type="text/javascript">
+   (function(){
+     emailjs.init({
+       publicKey: "rtXHvk4SMZqesgp1V",
+     });
+   })();
+   </script>
+   
+   <script>
+           function sendMail(event) {
+   event.preventDefault(); // Prevent form submission
+
+   let name = document.getElementById("name").value.trim();
+   let email = document.getElementById("email").value.trim();
+   let subject = document.getElementById("subject").value.trim();
+   let message = document.getElementById("message").value.trim();
+
+   if (!name) {
+       alert("Please enter your name.");
+       return;
+   }
+   if (!email) {
+       alert("Please enter your email.");
+       return;
+   }
+   if (!subject) {
+       alert("Please enter the subject.");
+       return;
+   }
+   if (!message) {
+       alert("Please enter your message.");
+       return;
+   }
+
+   // Send email if all fields are valid
+   let parms = { name, email, subject, message };
+   emailjs.send("service_q7btjyu", "template_ozfiwtq", parms)
+       .then(() => {
+           alert("Email has been sent successfully!");
+           document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("subject").value = "";
+      document.getElementById("message").value = "";
+       })
+       .catch((error) => {
+           alert("Failed to send email: " + error);
+       });
+}
+
+   </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Myckelraj_Portfolio</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
+            </div>
+            
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonials</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="mb-3" style="color: black;">I'm</h3>
+                    <h1 class="display-3 mb-3">Myckelraj G</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">
+                        Java Full Stack Developer, Content Writer, Front End Developer, WordPress Developer
+                    </div>
+    
+                    <div class="d-flex align-items-center pt-5">
+                        <a href="https://drive.google.com/file/d/1dF9D89ZVLc3xDha6K47Ww-cndYxqu9rD/view?usp=drive_link" class="btn btn-primary py-3 px-4 me-5">View my Resume</a>
+                    </div>
+                    <div class="pt-4">
+                        <p><strong>Find me on coding platforms:</strong></p>
+                        <ul class="list-styled">
+                            <li><a href="https://www.codechef.com/users/myckelraj" target="_blank" class="btn btn-outline-primary btn-sm me-2 mb-2">CodeChef</a></li>
+                            <li><a href="https://www.hackerrank.com/myckelsmash01" target="_blank" class="btn btn-outline-primary btn-sm me-2 mb-2">HackerRank</a></li>
+                            <li><a href="https://leetcode.com/myckelraj/" target="_blank" class="btn btn-outline-primary btn-sm me-2 mb-2">LeetCode</a></li>
+                            <li><a href="https://www.geeksforgeeks.org/user/myckel22/" target="_blank" class="btn btn-outline-primary btn-sm me-2 mb-2">GeeksforGeeks</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img class="img-fluid" src="img/myckelraj.jpg" alt="Myckelraj G">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">1</h1>
+                            <h5 class="mb-0">Year</h5>
+                        </div>
+                        <h3 class="lh-base mb-0">of working experience as a Full Stack developer and Web Designer.
+                            I’ve successfully worked on complex projects, collaborating closely with teams to deliver efficient, clean code. 
+                        </h3>
+                        <h3><br>
+                        </h3>
+                    </div>
+                    <p class="mb-4"></p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Affordable Prices</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="#project">View Projects</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">4</h2>
+                    </div>
+                    <p class="mb-4">
+                        I’m constantly enhancing my skills in emerging technology, ensuring that I stay at the forefront of the industry.From building responsive, user-friendly websites using modern technologies to creating and customizing WordPress sites, each project demonstrates my ability to meet client goals with precision. </p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">4</h2>
+                    </div>
+                    <p class="mb-0"> I've also worked on integrating APIs, optimizing site performance, and delivering secure e-commerce solutions. My approach combines attention to detail with a focus on usability, ensuring that every project not only meets technical requirements but also delivers an exceptional user experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Experiences</h1>
+                    <p class="mb-4">Throughout my experience as a Full Stack developer, I have successfully delivered a diverse range of projects, covering both front-end, back-end and Database development.</p>
+                    <h3 class="mb-4">Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Interpersonal Skills</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Core & Advanced Java</h6>
+                                </div>   
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Data Structures and Algorithms</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML5</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">CSS3</h6>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                </div>
+                              
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">TypeScript</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">React.js</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">SQL</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">NoSQL</h6>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Spring Boot</h6>  
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Spring Security</h6>
+                                    
+                                </div>
+                               
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Hibernate/ JPA</h6>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Restful API's </h6>
+                                   
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Postman / Maven</h6>
+                                   
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Bootstrap</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Git/GitHub/Jira</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Ms Office(Excel,Word,
+                                        PowerPoint)</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Verbal & Written Communication</h6>
+                                </div>
+                                
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">
+                                        WordPress
+                                    </h6>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Front-end Developer</h5>
+                                    <h6 class="mb-0">Nexus Info</h6>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">June,2024 - Sep,2024 
+                                        <li>During the contract as a Frontend Developer, a responsive website was developed for Techy Software using HTML, CSS, JavaScript, and React libraries.</li>
+                                        <li>This project led to a 75% increase in organic search visibility and an 85% boost in customer engagement. Integration of WordPress as a CMS streamlined content updates, making it easier for non-technical team members to publish new content.</li>
+                                        <li>
+                                            Additionally, interactive elements such as product showcases and customer feedback forms were implemented, enhancing user experience. Efforts ensured cross-device compatibility and utilized best practices in React. This role honed frontend development skills and delivered significant results for the client.
+                                        </li>
+                                            
+                                    
+                                    </p>                                   
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Application Developer</h5>
+                                    <h6 class="mb-0">Harman International</h6>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">Nov,2023 - June,2024
+                                        <li>Focused on improving system efficiency by 20% through in-depth analysis and optimization of V2X communication protocols. 
+                                           </li>
+                                           <li> Advanced data compression techniques were implemented, and protocols were fine-tuned to significantly enhance performance.</li>
+                                        <li> Led innovative experiments that resulted in over $1 million in incremental revenue for Harman International. This involved developing and implementing robust Application Programming Interfaces (APIs) for V2X systems, enhancing functionality and creating new growth opportunities.</li>
+                                       
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Electrical And Electronics Engineering</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2018 - 2022</p>
+                                    <h6 class="mb-0">Anna University, GCE Salem</h6>
+                                </div>  
+                                
+                                    <div class="row gy-5 gx-4">
+                                        <div class="col-sm-6">
+                                            <h5>Maths Biology</h5>
+                                            <hr class="text-primary my-2">
+                                            <p class="text-primary mb-1">2017 - 2018</p>
+                                            <h6 class="mb-0">Malco Vidhyalaya Matriculation School</h6>
+                                        </div>  
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Content Writing</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$99</span></h6>
+                            <span>I provide professional content writing services that cater to your brand's unique voice and audience. From blog posts and articles to website copy and marketing materials, I specialize in creating engaging, informative, and SEO-optimized content that drives traffic and boosts conversions. My writing process involves thorough research and an understanding of your goals, ensuring every piece resonates with your target audience.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code-branch fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Graphic Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$299</span></h6>
+                            <span>I deliver creative graphic design services that effectively communicate your brand message and engage your audience. Whether you need HDR Blending ,image editing, brochures, item removal, Day to Dusk, Virtual Staging. I bring a fresh perspective and a keen eye for detail to every project. My design process focuses on understanding your goals and translating them into compelling visual narratives.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Java Development</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>As a skilled Java developer, I specialize in creating robust and scalable applications tailored to meet your specific needs. With expertise in Java frameworks like Spring and Hibernate, I can develop everything from web applications to enterprise solutions. My focus is on writing clean, efficient, and maintainable code, ensuring your project is delivered on time and within budget.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Landing Page Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>I design high-converting landing pages that capture attention and drive action. My approach combines aesthetics with functionality, ensuring that your landing page not only looks great but also effectively communicates your message and encourages visitors to take the desired action. With a focus on user experience, clear calls-to-action, and responsive design, I can help you turn visitors into leads and customers.</span>
+                        </div>
+                    </div>
+                </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Completed Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/kaira.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/kaira.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Goat.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Goat.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/IceCream.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/IceCream.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/hvac.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/hvac.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Pizza.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Pizza.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/mart.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/mart.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+<br>
+<br>
+   <!-- Testimonial Start -->
+<div class="container-fluid bg-light py-5 my-5" id="testimonial">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonials</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="testimonial-left h-100">
+                    <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                    <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="owl-carousel testimonial-carousel">
+                    
+                    <!-- Testimonial 1 - John  -->
+                    <div class="testimonial-item text-center">
+                        <div class="position-relative mb-5">
+                            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left text-primary"></i>
+                            </div>
+                        </div>
+                        <p class="fs-5 fst-italic">
+                            "Myckelraj writing has been transformative for our content strategy. His deep understanding of our niche and his ability to produce engaging and well-structured content have helped us connect better with our audience. Highly recommended!"
+                        </p>
+                        <hr class="w-25 mx-auto">
+                        <h5>John Marker</h5>
+                        <span>Director</span>
+                    </div>
+
+                    <!-- Testimonial 2 - Russera -->
+                    <div class="testimonial-item text-center">
+                        <div class="position-relative mb-5">
+                            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left text-primary"></i>
+                            </div>
+                        </div>
+                        <p class="fs-5 fst-italic">
+                            "Working with Myckelraj has been a pleasure. His content is always insightful, meticulously researched, and written in a way that resonates with our readers. His contributions have consistently improved our online visibility and engagement."
+                        </p>
+                        <hr class="w-25 mx-auto">
+                        <h5>Russera</h5>
+                        <span>Chief</span>
+                    </div>
+
+                    <!-- Testimonial 3 - Iswarya -->
+                    <div class="testimonial-item text-center">
+                        <div class="position-relative mb-5">
+                            <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                            <div class="testimonial-icon">
+                                <i class="fa fa-quote-left text-primary"></i>
+                            </div>
+                        </div>
+                        <p class="fs-5 fst-italic">
+                            "Myckelraj creative approach to content writing has significantly boosted our brand’s narrative. His ability to adapt tone and style to match our target audience has been impressive, and his work always exceeds our expectations."
+                        </p>
+                        <hr class="w-25 mx-auto">
+                        <h5>Iswarya</h5>
+                        <span>Brand Manager</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="testimonial-right h-100">
+                    <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                    <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                    <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+<!-- Map Start -->
+<div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+    <h1>Location</h1>
+    <div class="container-xxl pt-5 px-0">
+        <div class="bg-dark">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3896.9927379402777!2d77.75024637537343!3d12.972135314535034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae116fdef7de27%3A0x7ac1f82f10b1221!2sWhitefield%2C%20Bengaluru%2C%20Karnataka%20560066%2C%20India!5e0!3m2!1sen!2sin!4v1697473458063!5m2!1sen!2sin"
+            frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </div>
+    </div>
+</div>
+<!-- Map End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+                
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">Place:</p>
+                    <h3 class="fw-bold">GR PG, Whitefield</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+91 638-263-5814</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">myckelraj22@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="https://www.youtube.com/@Ytmjvoice" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/myckelrajg/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" href="https://github.com/myckelraj" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <!-- Additional Links -->
+                        <a class="btn btn-square btn-primary me-2" href="https://www.geeksforgeeks.org/user/myckel22/" target="_blank">
+                            <i class="fas fa-code"></i> <!-- Adjust icon if needed -->
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.hackerrank.com/myckelsmash01" target="_blank">
+                            <i class="fas fa-terminal"></i> <!-- Adjust icon if needed -->
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" href="https://leetcode.com/myckelraj/" target="_blank">
+                            <i class="fas fa-puzzle-piece"></i> <!-- Adjust icon if needed -->
+                        </a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.codechef.com/users/myckelraj" target="_blank">
+                            <i class="fas fa-utensils"></i> <!-- Adjust icon if needed -->
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <form  name="contact" method="POST" netlify  onsubmit="sendMail(event)">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    
+
+<br>
+<br>
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-secondary" href="#">Myckelraj_Portfolio</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a>Myckelraj G</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
